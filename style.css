@@ -1,0 +1,226 @@
+.main{
+    width: 100%;
+    height: 490px;
+    background-color: aqua;
+    display: flex;
+}
+
+.panel_izq{
+    width: 60%;
+    height: 100%;
+    background:linear-gradient(#8c89d6,#b5c2e6) ;
+    text-align: center;
+}
+
+.area_logo{
+    width: 100%;
+    height: 10%;
+    margin-left: 0px;
+    background-color: blanchedalmond;
+    display: flex;
+}
+
+.titulo{
+    width: 100%;
+    height: 30px;
+    background-color: burlywood;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+    color: #1f579c;
+    margin-top: 3%;
+}
+
+.enlace_encriptador{
+    text-decoration: none;
+}
+
+.cuadro_entrada{
+    width: 500px;
+    height: 200px;
+    margin-top: 5%;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    color: #0A3871;
+    resize: none;
+    border: none;
+}
+
+
+.alerta{
+    display: inline-flex;
+    margin-top: 10%;
+    margin-left: -35%;
+    color: gray;
+}
+
+
+.btnEncriptar{
+    width: 250px;
+    height: 67px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.btnEncriptar:hover{
+    background-color: #0A3871;
+    color: white;
+    transition-duration: 0.5s;
+
+}
+
+.btnDesencriptar{
+    width: 250px;
+    height: 67px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.btnDesencriptar:hover{
+    background-color: #0A3871;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.panel_der{
+    width: 38%;
+    height: 98%;
+    margin-top: 2px;
+    margin-left: 5px;
+    background-color: burlywood;
+    text-align: center;
+    border-radius: 24px;
+    border-right: 2px;
+    border-color: blue;
+    border-style: solid;
+    position: relative;
+}
+
+.cuadro_salida{
+    width: 90%;
+    height: 346px;
+    margin-top: 5%;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    color: #0A3871;
+    resize: none;
+    border-style: none;
+    background-color: burlywood;
+    transition-duration: 2s;
+
+}
+
+.munieco{
+    margin-top: 5%;
+    width: 300px;
+}
+
+.boton_der{
+    margin-top: 5%;
+}
+
+.btnCopiar{
+    width: 250px;
+    height: 67px;
+    margin-top: 5px;
+    margin-left: -120px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    position: absolute;
+    font-size: large;
+}
+
+.btnCopiar:hover{
+    background-color: #0A3871;
+    color: white;
+    transition-duration: 0.5s;
+
+}
+
+.pie{
+    text-align: center;
+    width: 98%;
+    height: 40px;
+    background-color: burlywood;
+    margin-top: 0;
+    position: absolute;
+    display: block;
+}
+
+.texto_pie{
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width:480px) {
+
+    .main{
+        width: 100%;
+        display: block;
+    }
+
+    .cabeza{
+        width: 100%;
+    }
+
+    .titulo{
+        margin-top: 5px;
+        text-align: center;
+        font-size: 87%;
+    }
+
+    .panel_izq{
+        width: 100%;
+        
+    }
+
+    .alerta{
+        width: 100%;
+        margin-left: 15%;
+    }
+
+    .btnEncriptar{
+        width: 70%;
+        height: 50px;
+    }
+
+    .btnDesencriptar{
+        width: 70%;
+        height: 50px;
+    }
+
+    .panel_der{
+        margin-top: 10px;
+    }
+
+    .cuadro_salida{
+        width: 97%;
+    }
+
+    .btnCopiar{
+        width: 70%;
+        height: 50px;
+    }
+
+    .panel_der{
+        width: 97%;
+    }
+
+    .pie{
+        /*margin-top: 650px;*/
+        width: 96%;
+        margin-top: 150%;
+        /*margin-left: 1px;*/
+    }
+
+   
+}

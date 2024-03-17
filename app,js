@@ -1,0 +1,241 @@
+/* DECLARACION DE VARIABLES*/
+
+const textoEntrada = document.querySelector("#texto_entrada");
+var textoSalida = document.querySelector(".cuadro_salida");
+
+const arreglo_claves = [
+    ["e", "enter"],
+    ["i", "imes"],
+    ["a", "ai"],
+    ["o", "ober"],
+    ["u", "ufat"]
+];
+
+
+
+/* DECLARACION DE FUNCIONES */
+
+
+
+function btnEncriptar(){
+
+    let texto = "";
+
+    if (validar_texto(textoEntrada.value) == true){
+
+        texto = encriptar(textoEntrada.value);
+
+
+        document.querySelector("#texto_entrada").value = "";
+
+        document.querySelector(".cuadro_salida").value = texto;
+        /*textoSalida.value = texto;*/
+
+    } else{
+
+        mensaje("Error : Tipo de caracter invalido. No se admiten mayùsculas, acentos o carateres especiales. Solo se admite texto en minuscula.");
+        
+    }
+
+
+    if( texto == ""){
+        mostrar_mensaje();
+        ocultar_cuadroSalida();
+    } else {
+        ocultar_mensaje();
+        mostrar_cuadroSalida();
+    }
+
+}
+
+
+
+
+function encriptar(frase){
+    let fraseEncriptada = "";
+
+    console.log(fraseEncriptada);
+
+    for(i=0; i<(arreglo_claves.length); i++){
+
+        if(frase.includes(arreglo_claves[i][0])){
+
+            fraseEncriptada = frase.replaceAll(arreglo_claves[i][0],arreglo_claves[i][1]);
+
+            frase = fraseEncriptada;
+            
+        } 
+    }
+
+    return fraseEncriptada;
+}
+
+
+
+
+function btnDesencriptar(){
+
+    const texto = desencriptar(textoEntrada.value);
+
+    if (validar_texto(textoEntrada.value) == true){
+
+        document.querySelector("#texto_entrada").value = "";
+        document.querySelector(".cuadro_salida").value = texto;
+
+    } else{
+
+        mensaje("Error : Tipo de caracter invalido. No se admiten mayùsculas, acentos o carateres especiales. Solo se admite texto en minuscula.");
+
+    }
+
+
+    if( texto == ""){
+        mostrar_mensaje();
+        ocultar_cuadroSalida();
+    } else {
+        ocultar_mensaje();
+        mostrar_cuadroSalida();
+    }
+
+}
+
+
+
+
+function desencriptar(fraseDesencriptada){
+
+    for(i=0; i<arreglo_claves.length; i++){
+
+        if(fraseDesencriptada.includes(arreglo_claves[i][1])){
+
+            fraseDesencriptada = fraseDesencriptada.replaceAll(arreglo_claves[i][1],arreglo_claves[i][0]);
+
+        }
+    }
+    return fraseDesencriptada;
+}
+
+
+
+
+function btnCopiar(){
+
+    let contenido = textoSalida.value;
+    
+    navigator.clipboard.writeText(contenido);
+    
+    textoSalida.textContent = "";
+}
+
+
+
+/* Valida el texto ingresado a la vez que se ingresa cada caracter */
+function validar(e) {
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    console.log("Ingrese a validar");
+
+    //Permite el ingreso de la tecla de retroceso para borrar
+    if (tecla == 8) {
+        return true;
+    }
+    //Permite el ingreso de espacios
+    if (tecla == 32) {
+        return true;
+    }
+    //Permite el ingreso de letra ñ (minuscula)
+    if (tecla == 241) {
+        return true;
+    }
+
+    // Patrón de entrada, en este caso solo acepta numeros y letras
+    /* patron = /[A-Za-z0-9]/; */
+    patron = /[a-z]/;
+
+    tecla_final = String.fromCharCode(tecla);
+
+    
+    if (patron.test(tecla_final) == false) {
+        /*alert("Tipo de caracter invalido : No se admiten mayùsculas, acentos o carateres especiales. Solo se admite texto en minuscula.");*/
+
+        mensaje("Tipo de caracter invalido: No se admiten mayùsculas, acentos o carateres especiales. Solo se admite texto en minuscula.");
+
+    }
+    return patron.test(tecla_final);
+}
+
+
+
+function ocultar_cuadroSalida(){
+
+    document.querySelector(".cuadro_salida").hidden = true;
+
+}
+
+
+function mostrar_cuadroSalida(){
+
+    document.querySelector(".cuadro_salida").hidden = false;
+
+}
+
+
+/* Oculta el contenido del panel derecho para mostrar el texto de salida */
+function ocultar_mensaje(){
+
+    document.querySelector(".munieco").hidden = true;
+    document.querySelector(".msj1").hidden = true;
+    document.querySelector(".msj2").hidden = true;
+
+}
+
+
+/* Hace visible el contenido del panel derecho cuando no se ingresa texto */
+function mostrar_mensaje(){
+
+    document.querySelector(".munieco").hidden = false;
+    document.querySelector(".msj1").hidden = false;
+    document.querySelector(".msj2").hidden = false;
+
+}
+
+
+
+function validar_texto(texto){
+    let cadena = texto;
+    let valido = true;
+
+    patron = /[a-z]/;
+
+    console.log("Estoy en validar_texto");
+
+    for (i=0; i<cadena.length; i++){
+
+        if (patron.test(cadena[i]) == false) {
+
+            if( cadena[i] == " " ){
+                valido = true;
+            } else {
+                mensaje("Tipo de caracter invalido: No se admiten mayùsculas, acentos o carateres especiales. Solo se admite texto en minuscula.");
+                return false;
+            }
+        }
+    }
+    return valido;
+}
+
+
+
+/* SweetAleer es una libreria de JavaScript para mostrar mensajes a los usuarios */
+/* https://sweetalert.js.org/docs/#icon */
+
+function mensaje(mensaje){
+    swal({
+        title: "Atención !",
+        text: mensaje,
+        icon: "info",
+        button: "Aceptar"
+      });
+}
+
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/dist/sweetalert2.min.css">
+    <title>Encriptador de Texto</title>
+
+</head>
+<body>
+
+    
+
+    <main class="main">
+
+        <div class="panel_izq">
+
+            <div class="area_logo">
+
+                <a href="https://www.aluracursos.com/" class="enlace_alura">
+                    <img src="imagenes/Logo.png" alt="">
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=BLgio_oPkLw&t=14s" text class="enlace_encriptador">
+                    <p class="titulo">Chalenge * * E n C r I p T a D o R  d e  T e X t O * *</p>
+                </a>
+
+            </div>
+
+            <section class="area_entrada">
+                <textarea id="texto_entrada" class="cuadro_entrada" onkeypress="return validar(event)" placeholder="Ingresa el texto para encriptar"></textarea>
+            </section>
+
+            <div class="alerta">
+                <p>
+                    <img src="imagenes/bi_exclamation-circle-fill.png" alt=""><p>  Solo letras minusculas y sin acentos</p>
+                </p>
+            </div>
+    
+            <div class="boton_izq">
+                <button class="btnEncriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btnDesencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+
+        </div>
+
+        
+        <div class="panel_der">
+
+            <section class="area_salida">
+                <img src="imagenes/Muñeco.png" class="munieco" alt="">
+                <h3 class="msj1">Ningún mensaje fue encontrado</h3>
+                <p class="msj2">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <textarea id="texto_salida" class="cuadro_salida" hidden></textarea>
+            </section>
+
+            <div class="boton_der">
+                <button class="btnCopiar" onclick="btnCopiar()">Copiar</button>
+            </div>
+
+        </div>
+        
+
+
+    </main>
+
+    <footer class="pie">
+
+        <p class="texto_pie"> Copyright © 2024 - Pablo C - Estudiante de Desarrollo Web</p>
+
+    </footer>
+
+    
+
+    <script src="app,js"></script>
+
+
+    <script src="/dist/sweetalert2.all.min.js"></script>
+
+
+    <script src="/dist/sweetalert2.all.js"></script>
+
+</body>
+
+</html>
