@@ -8,15 +8,10 @@
    <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
 </p>
 
-<p> El proyecto se encuentra en fase de desarrollo y se inició sin conocimientos previos </p>
-<p> de programación en HTML, CSS y JavaScript. Tambien desconocía la existencia de herramientas</p>
-<p> para control de version como Git - Github. Así que ahí vamos, siguiendo las muy claras y excelentes clases impartidas </p>
-<p> por los instructores durante el cursado, y muy conforme con los resultados obtenidos hasta el momento. </p>
+<p> El proyecto se encuentra en fase de desarrollo y se inició sin conocimientos previos de programación en HTML, CSS y JavaScript. Tambien desconocía la existencia de herramientas para control de version como Git - Github. Así que ahí vamos, siguiendo las muy claras y excelentes clases impartidas por los instructores durante el cursado, y muy conforme con los resultados obtenidos hasta el momento. </p>
 
 <p> Mucho por aprender aún y seguramente muchas cosas para mejorar, pero con optimismo y confianza en el programa.</p>
 
-<p> Agracederé mucho a quienes tengan experiencia o enfoques diferentes cualquier comentario, aporte o critica constructiva </p>
-<p> que me puedan brindar sobre cualquier aspecto del proyecto.</p>
+<p> Agracederé mucho a quienes tengan experiencia o enfoques diferentes cualquier comentario, aporte o critica constructiva que me puedan brindar sobre cualquier aspecto del proyecto.</p>
 
-<p> Mi dedicación actual al estudio de la programación es de tiempo parcial y acotado a un promedio de una o dos horas diarias,</p>
-<p> esperando poder mejorar esta condición en la medida que incorpore mayores conocimientos. </p>
+<p> Mi dedicación actual al estudio de la programación es de tiempo parcial y acotado a un promedio de una o dos horas diarias, esperando poder mejorar esta condición en la medida que incorpore mayores conocimientos. </p>
