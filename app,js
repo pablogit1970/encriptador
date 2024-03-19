@@ -3,15 +3,6 @@
 const textoEntrada = document.querySelector("#texto_entrada");
 var textoSalida = document.querySelector(".cuadro_salida");
 
-const arreglo_claves = [
-    ["e", "enter"],
-    ["i", "imes"],
-    ["a", "ai"],
-    ["o", "ober"],
-    ["u", "ufat"]
-];
-
-
 
 /* DECLARACION DE FUNCIONES */
 
@@ -53,6 +44,15 @@ function btnEncriptar(){
 
 function encriptar(frase){
     let fraseEncriptada = "";
+
+    let arreglo_claves = [
+    ["e", "enter"],
+    ["i", "imes"],
+    ["a", "ai"],
+    ["o", "ober"],
+    ["u", "ufat"]
+];
+
 
     console.log(fraseEncriptada);
 
@@ -103,6 +103,15 @@ function btnDesencriptar(){
 
 
 function desencriptar(fraseDesencriptada){
+
+    let arreglo_claves = [
+    ["u", "ufat"],
+    ["o", "ober"],
+    ["a", "ai"],
+    ["i", "imes"],
+    ["e", "enter"]
+    ];
+
 
     for(i=0; i<arreglo_claves.length; i++){
 
