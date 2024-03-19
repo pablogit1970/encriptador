@@ -6,7 +6,6 @@ var textoSalida = document.querySelector(".cuadro_salida");
 
 /* DECLARACION DE FUNCIONES */
 
-alert("Verificando modificación");
 
 function btnEncriptar(){
 
