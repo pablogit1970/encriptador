@@ -183,6 +183,13 @@
         
     }
 
+    .cuadro_entrada{
+    width: 100%;
+    height: 200px;
+    margin-top: 5%;
+    }
+
+
     .alerta{
         width: 100%;
         margin-left: 15%;
